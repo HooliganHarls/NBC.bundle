@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site site="http://www.nbc.com"
+	    plugin="http://www.nbc.com/assets/video/4-0/swf/NBCVideoApp.swf"
+			initialState="playing"
+			version="1.0">
+	
+	
+	<crop x="0" y="0" width="971" height="545" />
+	
+	<seekbar type="simple">
+		<start x="48" y="516" />
+		<end   x="550" y="516" />
+		<played>
+				<color rgb="151515" />
+		</played>
+	</seekbar>
+	
+	<!-- PLAYING -->
+	<state name="playing">
+		<event>
+			<condition>
+				<command name="pause" />
+			</condition>
+			<action>
+				<click x="23" y="516" />
+				<goto state="paused" />
+			</action>
+		</event>
+		
+		<!-- Video ends -->
+		<event>
+			<condition>
+				<url matches="http://www.nbc.com/video/library/" />
+			</condition>
+			<action>
+				<goto state="end" />
+			</action>
+		</event>
+	</state>
+	
+	<!-- PAUSED -->
+	<state name="paused">
+		<event>
+			<condition>
+				<command name="play" />
+			</condition>
+			<action>
+                <click x="23" y="516" />
+				<click x="220" y="225" />
+				<goto state="playing" />
+			</action>
+		</event>
+	</state>
+</site>
