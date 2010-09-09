@@ -5,7 +5,7 @@
 			version="1.0">
 	
 	
-	<crop x="0" y="0" width="971" height="545" />
+	<crop x="0" y="0" width="971" height="504" />
 	
 	<seekbar type="simple">
 		<start x="48" y="516" />
