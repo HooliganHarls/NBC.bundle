@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site site="http://www.nbc.com"
-	    plugin="http://www.nbc.com/assets/video/4-0/swf/NBCVideoApp.swf"
+	    plugin="http://www.nbc.com/assets/video/5-0/swf/FrameworkShim.swf"
 			initialState="playing"
 			version="1.0">
 	
